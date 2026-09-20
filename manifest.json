@@ -1,0 +1,11 @@
+{
+  "type": "plugin",
+  "domain": "local_audio_source",
+  "stage": "alpha",
+  "name": "Local Audio Source",
+  "description": "Pipe realtime audio from a PulseAudio/PipeWire capture source (e.g. Bluetooth receiver or line-in) to any Music Assistant player.",
+  "codeowners": ["@meiser79"],
+  "requirements": ["PyChromecast>=14.0.0"],
+  "documentation": "",
+  "multi_instance": true
+}

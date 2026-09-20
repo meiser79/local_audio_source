@@ -1,0 +1,20 @@
+{
+  "config_entries": {
+    "friendly_name": {"label": "Display Name", "description": "Name shown in Live Inputs and on players."},
+    "include_monitors": {"label": "Include monitor sources", "description": "Also show sink monitor sources in the input picker."},
+    "input_device": {"label": "Audio Input Device", "description": "PulseAudio/PipeWire capture source.", "options": {"": "Manual Entry (PA/PipeWire source name)"}},
+    "auto_trigger": {"label": "Auto-start on signal", "description": "Line-sense mode: automatically start playback when input signal is detected and stop after silence."},
+    "target_player_id": {"label": "Auto-start target player", "description": "Player to start when signal is detected.", "options": {"__auto__": "Auto"}},
+    "trigger_threshold_dbfs": {"label": "Signal threshold (dBFS)", "description": "RMS level above which the input is considered active."},
+    "enable_cast_metadata": {"label": "Mirror now-playing from a Chromecast", "description": "Read-only: watches a Chromecast on the network and shows its title/artist/album as this source's stream metadata."},
+    "chromecast_host": {"label": "Chromecast host", "description": "IP address or hostname of the Chromecast to mirror now-playing info from."},
+    "icon_preset": {"label": "Icon", "description": "Icon shown for this source in Live Inputs and on players.", "options": {"custom": "Custom (enter URL below)", "bluetooth": "Bluetooth", "cable": "Cable", "chromecast": "Chromecast", "music": "Music", "stereo": "Stereo"}},
+    "thumbnail_image": {"label": "Custom icon URL", "description": "URL to a custom image, used when Icon is set to Custom."}
+  },
+  "manifest": {"description": "Realtime PulseAudio/PipeWire line-in source."},
+  "setup_flow": {
+    "monitors": {"title": "Local Audio Source", "description": "Choose whether monitor sources should also be listed."},
+    "device": {"title": "Select Audio Input", "description": "Pick the PulseAudio/PipeWire source to capture."}
+  },
+  "errors": {"no_packets": "No audio could be captured from source {0} for '{1}'."}
+}

@@ -1,0 +1,74 @@
+{
+  "config_entries": {
+    "friendly_name": {
+      "label": "Anzeigename",
+      "description": "Name, der unter Live-Eingänge und auf den Playern angezeigt wird."
+    },
+    "include_monitors": {
+      "label": "Monitor-Quellen einbeziehen",
+      "description": "Zusätzlich die Monitor-Quellen von Audioausgängen in der Eingangsauswahl anzeigen."
+    },
+    "input_device": {
+      "label": "Audio-Eingabegerät",
+      "description": "PulseAudio/PipeWire-Aufnahmequelle.",
+      "options": {
+        "": "Manuelle Eingabe (Name der PA/PipeWire-Quelle)"
+      }
+    },
+    "auto_trigger": {
+      "label": "Automatisch starten bei Signal",
+      "description": "Line-Sense-Modus: Wiedergabe automatisch starten, sobald ein Eingangssignal erkannt wird, und nach Stille wieder beenden."
+    },
+    "target_player_id": {
+      "label": "Ziel-Player für den automatischen Start",
+      "description": "Player, der bei erkanntem Signal gestartet wird.",
+      "options": {
+        "__auto__": "Automatisch"
+      }
+    },
+    "trigger_threshold_dbfs": {
+      "label": "Signalschwelle (dBFS)",
+      "description": "RMS-Pegel, ab dem der Eingang als aktiv gilt."
+    },
+    "enable_cast_metadata": {
+      "label": "Aktuelle Wiedergabe von einem Chromecast übernehmen",
+      "description": "Nur lesend: Beobachtet einen Chromecast im Netzwerk und zeigt dessen Titel/Interpret/Album als Stream-Metadaten dieser Quelle an."
+    },
+    "chromecast_host": {
+      "label": "Chromecast-Host",
+      "description": "IP-Adresse oder Hostname des Chromecasts, dessen Wiedergabeinformationen übernommen werden sollen."
+    },
+    "icon_preset": {
+      "label": "Symbol",
+      "description": "Symbol, das für diese Quelle unter Live-Eingänge und auf den Playern angezeigt wird.",
+      "options": {
+        "custom": "Benutzerdefiniert (URL unten eingeben)",
+        "bluetooth": "Bluetooth",
+        "cable": "Kabel",
+        "chromecast": "Chromecast",
+        "music": "Musik",
+        "stereo": "Stereo"
+      }
+    },
+    "thumbnail_image": {
+      "label": "URL für eigenes Symbol",
+      "description": "URL zu einem eigenen Bild, das verwendet wird, wenn als Symbol „Benutzerdefiniert“ gewählt ist."
+    }
+  },
+  "manifest": {
+    "description": "Echtzeit-Line-in-Quelle über PulseAudio/PipeWire."
+  },
+  "setup_flow": {
+    "monitors": {
+      "title": "Local Audio Source",
+      "description": "Lege fest, ob Monitor-Quellen ebenfalls aufgelistet werden sollen."
+    },
+    "device": {
+      "title": "Audioeingang auswählen",
+      "description": "Wähle die PulseAudio/PipeWire-Quelle aus, die aufgenommen werden soll."
+    }
+  },
+  "errors": {
+    "no_packets": "Von der Quelle {0} konnte für „{1}“ kein Audio aufgenommen werden."
+  }
+}
