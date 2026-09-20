@@ -1,0 +1,11 @@
+{
+  "type": "plugin",
+  "domain": "local_audio_source",
+  "stage": "beta",
+  "name": "Local Audio Source",
+  "description": "Pipe realtime audio from a PulseAudio/PipeWire capture source (e.g. Bluetooth receiver or line-in) to any Music Assistant player.",
+  "codeowners": ["@meiser79"],
+  "requirements": [],
+  "documentation": "",
+  "multi_instance": true
+}

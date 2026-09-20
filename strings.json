@@ -1,0 +1,20 @@
+{
+  "config_entries": {
+    "friendly_name": {"label": "Display Name", "description": "Name shown in Live Inputs and on players."},
+    "include_monitors": {"label": "Include monitor sources", "description": "Also show sink monitor sources in the input picker."},
+    "input_device": {"label": "Audio Input Device", "description": "PulseAudio/PipeWire capture source.", "options": {"": "Manual Entry (PA/PipeWire source name)"}},
+    "auto_trigger": {"label": "Auto-start on signal", "description": "Line-sense mode: automatically start playback when input signal is detected and stop after silence."},
+    "target_player_id": {"label": "Auto-start target player", "description": "Player to start when signal is detected.", "options": {"__auto__": "Auto"}},
+    "trigger_threshold_dbfs": {"label": "Signal threshold (dBFS)", "description": "RMS level above which the input is considered active."},
+    "enable_media_player_metadata": {"label": "Mirror now-playing from a Home Assistant media player", "description": "Read-only: watches a media_player entity via the Home Assistant plugin and shows its title/artist/album/artwork as this source's stream metadata."},
+    "media_player_entity": {"label": "Media player entity", "description": "Home Assistant media_player entity to mirror now-playing info from (e.g. media_player.living_room_tv). Requires the Home Assistant plugin."},
+    "icon_preset": {"label": "Icon", "description": "Icon shown for this source in Live Inputs and on players.", "options": {"custom": "Custom (enter URL below)", "bluetooth": "Bluetooth", "cable": "Cable", "cast": "Cast", "music": "Music", "stereo": "Speakers"}},
+    "thumbnail_image": {"label": "Custom icon URL", "description": "URL to a custom image, used when Icon is set to Custom."}
+  },
+  "manifest": {"description": "Realtime PulseAudio/PipeWire line-in source."},
+  "setup_flow": {
+    "monitors": {"title": "Local Audio Source", "description": "Choose whether monitor sources should also be listed."},
+    "device": {"title": "Select Audio Input", "description": "Pick the PulseAudio/PipeWire source to capture."}
+  },
+  "errors": {"no_packets": "No audio could be captured from source {0} for '{1}'."}
+}

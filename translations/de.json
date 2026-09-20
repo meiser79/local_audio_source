@@ -1,0 +1,74 @@
+{
+  "config_entries": {
+    "friendly_name": {
+      "label": "Anzeigename",
+      "description": "Unter diesem Namen erscheint die Quelle bei den Live-Eingängen und auf den Wiedergabegeräten."
+    },
+    "include_monitors": {
+      "label": "Monitor-Quellen anzeigen",
+      "description": "Zeigt in der Auswahl zusätzlich die Monitor-Quellen der Audioausgänge an. Damit lässt sich aufnehmen, was gerade über einen Ausgang abgespielt wird."
+    },
+    "input_device": {
+      "label": "Audioeingang",
+      "description": "Die PulseAudio-/PipeWire-Quelle, die aufgenommen wird.",
+      "options": {
+        "": "Manuell eingeben (Name der PulseAudio-/PipeWire-Quelle)"
+      }
+    },
+    "auto_trigger": {
+      "label": "Bei Signal automatisch starten",
+      "description": "Startet die Wiedergabe, sobald am Eingang ein Signal anliegt, und beendet sie nach längerer Stille wieder."
+    },
+    "target_player_id": {
+      "label": "Wiedergabegerät für den automatischen Start",
+      "description": "Auf diesem Wiedergabegerät startet die Wiedergabe, sobald ein Signal erkannt wird.",
+      "options": {
+        "__auto__": "Automatisch"
+      }
+    },
+    "trigger_threshold_dbfs": {
+      "label": "Signalschwelle (dBFS)",
+      "description": "Ab diesem Pegel gilt der Eingang als aktiv. Ein höherer Wert (näher an 0) erfordert ein lauteres Signal, ein niedrigerer Wert reagiert empfindlicher."
+    },
+    "enable_media_player_metadata": {
+      "label": "Titelinfos von einem Home-Assistant-Mediaplayer übernehmen",
+      "description": "Zeigt Titel, Interpret, Album und Cover eines Mediaplayers aus Home Assistant für diese Quelle an. Der Mediaplayer wird dabei nur ausgelesen, nicht gesteuert."
+    },
+    "media_player_entity": {
+      "label": "Mediaplayer",
+      "description": "Der Home-Assistant-Mediaplayer, dessen Titelinfos angezeigt werden (z. B. media_player.wohnzimmer_tv). Dafür muss das Home-Assistant-Plugin eingerichtet sein."
+    },
+    "icon_preset": {
+      "label": "Symbol",
+      "description": "Das Symbol dieser Quelle bei den Live-Eingängen und auf den Wiedergabegeräten.",
+      "options": {
+        "custom": "Eigenes Bild (URL unten eingeben)",
+        "bluetooth": "Bluetooth",
+        "cable": "Kabel",
+        "cast": "Cast",
+        "music": "Musik",
+        "stereo": "Lautsprecher"
+      }
+    },
+    "thumbnail_image": {
+      "label": "Bild-URL",
+      "description": "URL eines eigenen Bildes. Wird verwendet, wenn als Symbol „Eigenes Bild“ ausgewählt ist."
+    }
+  },
+  "manifest": {
+    "description": "Gibt einen lokalen Audioeingang (z. B. Line-in oder Bluetooth-Empfänger) in Echtzeit auf beliebigen Wiedergabegeräten wieder."
+  },
+  "setup_flow": {
+    "monitors": {
+      "title": "Local Audio Source",
+      "description": "Lege fest, ob auch die Monitor-Quellen der Audioausgänge zur Auswahl stehen sollen."
+    },
+    "device": {
+      "title": "Audioeingang auswählen",
+      "description": "Wähle die PulseAudio-/PipeWire-Quelle aus, die aufgenommen werden soll."
+    }
+  },
+  "errors": {
+    "no_packets": "Von der Quelle {0} kommt für „{1}“ kein Audio an."
+  }
+}
